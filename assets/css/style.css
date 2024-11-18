@@ -562,6 +562,43 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Skill slider
+--------------------------------------------------------------*/
+
+#skills-slider {
+  width: 100%;
+  max-width: 600px; /* Adjust width of the slider */
+  margin: 0 auto;
+  overflow: hidden; /* Prevents images from overflowing */
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition between slides */
+}
+
+.swiper-slide {
+  width: 100%; /* Make each slide take up the full width of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Keeps the aspect ratio */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+
+/*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
 .contact {
