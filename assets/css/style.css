@@ -369,6 +369,15 @@ section {
   margin-bottom: 0;
 }
 
+.profile-img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
 
 /*--------------------------------------------------------------
 # Skills
@@ -566,10 +575,11 @@ section {
 --------------------------------------------------------------*/
 
 #skills-slider {
-  width: 100%;
-  max-width: 600px; /* Adjust width of the slider */
+  width: 120%;
+  max-width: 800px; /* Decreased width of the slider for a smaller box size */
   margin: 0 auto;
   overflow: hidden; /* Prevents images from overflowing */
+  float: right; /* Aligns the slider to the right side */
 }
 
 .swiper-wrapper {
@@ -578,7 +588,7 @@ section {
 }
 
 .swiper-slide {
-  width: 100%; /* Make each slide take up the full width of the container */
+  width: 120%; /* Make each slide take up the full width of the container */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -595,6 +605,56 @@ section {
   bottom: 10px;
   text-align: center;
   width: 100%;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.detail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+}
+
+
+.detail-overlay h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: slideUp 0.6s ease;
+}
+
+.detail-overlay p {
+  font-size: 1rem;
+  padding: 0 15px;
+  animation: slideUp 0.6s ease 0.1s;
+}
+
+.image-container:hover .detail-overlay {
+  opacity: 1;
 }
 
 
@@ -862,3 +922,5 @@ section {
     padding-right: 20px 15px;
   }
 }
+
+
