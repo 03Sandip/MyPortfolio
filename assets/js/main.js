@@ -72,6 +72,8 @@
     })
   }
 
+  
+
   /**
    * Back to top button
    */
@@ -253,6 +255,22 @@
       mirror: false
     })
   });
+
+
+  var swiper = new Swiper('#skills-slider', {
+    loop: true, // Optional: enables infinite loop
+    slidesPerView: 1, // Set the number of slides to show at once
+    spaceBetween: 10, // Adjust space between slides
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    autoplay: {
+      delay: 2500, // Optional: sets the delay between slide transitions
+      disableOnInteraction: false,
+    },
+  });
+  
 
   /**
    * Initiate Pure Counter 
