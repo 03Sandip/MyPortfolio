@@ -129,20 +129,22 @@
   });
 
   /**
-   * Hero type effect
-   */
-  const typed = select('.typed')
-  if (typed) {
-    let typed_strings = typed.getAttribute('data-typed-items')
-    typed_strings = typed_strings.split(',')
-    new Typed('.typed', {
-      strings: typed_strings,
-      loop: true,
-      typeSpeed: 100,
-      backSpeed: 50,
-      backDelay: 2000
-    });
-  }
+ * Hero type effect
+ */
+const typed = select('.typed')
+if (typed) {
+  let typed_strings = typed.getAttribute('data-typed-items')
+  typed_strings = typed_strings.split(',')
+  new Typed('.typed', {
+    strings: typed_strings,
+    loop: true,
+    typeSpeed: 100,
+    backSpeed: 50,
+    backDelay: 2000,
+    cursorChar: '/>' 
+  });
+}
+
 
   /**
    * Skills animation
@@ -256,7 +258,9 @@
     })
   });
 
-
+/**
+   * Skill slider 
+   */
   var swiper = new Swiper('#skills-slider', {
     loop: true, // Optional: enables infinite loop
     slidesPerView: 1, // Set the number of slides to show at once
@@ -270,8 +274,6 @@
       disableOnInteraction: false,
     },
   });
-  
-
   /**
    * Initiate Pure Counter 
    */
