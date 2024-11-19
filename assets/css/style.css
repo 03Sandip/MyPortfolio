@@ -230,8 +230,8 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: auto;
-  height: 110vh;
-  background: url("../img/hero-bg.jpg") top center;
+  height: 100vh;
+  background: url("../img/desgine.jpg") top center;
   background-size: cover;
 
 }
@@ -269,7 +269,7 @@ h6 {
 }
 
 #hero p span {
-  color: #fff;
+  color: #ffffff;
   padding-bottom: 4px;
   letter-spacing: 1px;
   border-bottom: 3px solid #149ddd;
@@ -293,6 +293,48 @@ h6 {
     margin-bottom: 30px;
   }
 }
+
+
+/*--------------------------------------------------------------
+# SAbout
+--------------------------------------------------------------*/
+.hover-effect {
+  transition: all 0.4s ease-in-out;
+  color: #444;
+  font-size: 16px;
+  line-height: 1.8;
+  position: relative;
+  z-index: 0;
+}
+
+.hover-effect:hover {
+  color: #fff;
+  background: linear-gradient(135deg, #b486e4, #80aaf2); /* Gradient effect */
+  padding: 15px;
+  border-radius: 8px;
+  transform: scale(1.05); /* Slight zoom effect */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Elevated shadow effect */
+  overflow: hidden;
+}
+
+.hover-effect:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1); /* Light shimmer */
+  transform: skewX(-30deg);
+  transition: left 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.hover-effect:hover::before {
+  left: 100%;
+}
+
+
 
 /*--------------------------------------------------------------
 # Sections General
@@ -923,4 +965,78 @@ section {
   }
 }
 
+/*-------------------------------------
+        Profiles
+--------------------------------------*/
+.profiles {
+  padding:  50px 0 100px;
+  border:  1px solid #e5ebf2;
+}
 
+.profiles-content {padding-top: 100px;}
+.profiles-content .col-sm-3{padding:0;}
+.profile-txt {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.single-profile {
+  position: relative;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #b2c1ce;
+  overflow:hidden;
+  -webkit-transition:background 0.5s linear; 
+  -moz-transition:background 0.5s linear; 
+  -ms-transition:background 0.5s linear; 
+  -o-transition:background 0.5s linear; 
+  transition:background 0.5s linear;
+}
+.profile-icon-name {
+  text-transform: capitalize;
+  color: #636a82;
+  font-size: 16px;
+}
+.single-profile.profile-no-border{border-right:transparent;}
+.profile-border {
+  border-bottom: 1px solid #b2c1ce;
+}
+.single-profile-overlay{
+  display:flex;
+  align-items:center;
+  text-transform: capitalize;
+  justify-content:center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: " ";
+  width:100%;
+  height: 100%;
+  background: #d92cf9;
+  background: -moz-linear-gradient(left, #d92cf9 0%, #b636ff 100%);
+  background: -webkit-linear-gradient(left, #d92cf9 0%,#b636ff 100%);
+  background: linear-gradient(to right, #d92cf9 0%,#b636ff 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d92cf9', endColorstr='#b636ff',GradientType=1 );
+  -webkit-transform:scale(0);
+  -moz-transform:scale(0);
+  -ms-transform:scale(0);
+  -o-transform:scale(0);
+  transform:scale(0);
+  -webkit-transition: .5s;
+  -moz-transition: .5s;
+  -ms-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+}
+.single-profile:hover .single-profile-overlay{
+  -webkit-transform:scale(1);
+  -moz-transform:scale(1);
+  -ms-transform:scale(1);
+  -o-transform:scale(1);
+  transform:scale(1);
+  top:0;
+}
+.single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
+.single-profile:hover .profile-border {border:transparent;}
