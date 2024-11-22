@@ -143,6 +143,7 @@ h6 {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -434,11 +435,14 @@ section {
 .skills .progress .skill {
   padding: 0;
   margin: 0 0 6px 0;
+  font-size: 14px;
   text-transform: uppercase;
   display: block;
   font-weight: 600;
   font-family: "Poppins", sans-serif;
   color: #050d18;
+  position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .skills .progress .skill .val {
@@ -457,6 +461,45 @@ section {
   transition: 0.9s;
   background-color: #149ddd;
 }
+
+
+.skill.glow:hover {
+  color: #1f8ef1;
+  text-shadow: 0 0 10px #1f8ef1, 0 0 20px #1f8ef1, 0 0 40px #1f8ef1;
+}
+
+/* Tooltip on Hover */
+.skill.glow::after {
+  content: attr(data-detail);
+  position: absolute;
+  bottom: -35px;
+  left: 0;
+  background: rgba(21, 101, 192, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 5px;
+  white-space: normal;  /* Allow content to wrap */
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s, transform 0.3s;
+  z-index: 10;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  width: auto;  /* Adjust width based on content */
+  min-width: 50px;  /* Optional: Set a minimum width */
+  max-width: auto;  /* Optional: Set a max width to avoid it becoming too wide */
+  height: auto;  /* Make height flexible based on content */
+  word-wrap: break-word;  /* Ensure long words break and do not overflow */
+}
+
+.skill.glow:hover::after {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 
 /*--------------------------------------------------------------
 # Resume
@@ -612,10 +655,11 @@ section {
   background-color: #149ddd;
 }
 
+
+
 /*--------------------------------------------------------------
 # Skill slider
 --------------------------------------------------------------*/
-
 #skills-slider {
   width: 120%;
   max-width: 800px; /* Decreased width of the slider for a smaller box size */
@@ -1040,3 +1084,7 @@ section {
 }
 .single-profile:hover .profile-icon-name,.single-profile:hover .profile-txt a>i{color: #fff;}
 .single-profile:hover .profile-border {border:transparent;}
+
+
+
+
