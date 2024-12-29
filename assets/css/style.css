@@ -411,79 +411,6 @@ section {
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  padding: 0;
-  margin: 0 0 6px 0;
-  font-size: 14px;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: "Poppins", sans-serif;
-  color: #050d18;
-  position: relative;
-  transition: all 0.3s ease-in-out;
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: #dce8f8;
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: #149ddd;
-}
-
-
-.skill.glow:hover {
-  color: #1f8ef1;
-  text-shadow: 0 0 10px #1f8ef1, 0 0 20px #1f8ef1, 0 0 40px #1f8ef1;
-}
-
-/* Tooltip on Hover */
-.skill.glow::after {
-  content: attr(data-detail);
-  position: absolute;
-  bottom: -35px;
-  left: 0;
-  background: rgba(21, 101, 192, 0.9);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 5px;
-  white-space: normal;  /* Allow content to wrap */
-  font-size: 14px;
-  font-family: "Poppins", sans-serif;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s, transform 0.3s;
-  z-index: 10;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  pointer-events: none;
-  width: auto;  /* Adjust width based on content */
-  min-width: 50px;  /* Optional: Set a minimum width */
-  max-width: auto;  /* Optional: Set a max width to avoid it becoming too wide */
-  height: auto;  /* Make height flexible based on content */
-  word-wrap: break-word;  /* Ensure long words break and do not overflow */
-}
-
-.skill.glow:hover::after {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 
@@ -1129,4 +1056,84 @@ section {
   background-color: transparent;
   color: #87CEEB; /* Sky blue text color */
   border: 1px solid #87CEEB; /* Outline border */
+}
+
+
+
+/* Circular Progress Bar Styles */
+/* Circular Progress Container */
+.circular-progress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00bcd4 calc(var(--percent) * 1%), /* Blue progress */
+    #e0e0e0 0 /* Gray remaining */
+  );
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #fff; /* Inner white background */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00bcd4;
+  z-index: 3;
+}
+
+.skill-label {
+  text-align: center;
+  font-size: 1em;
+  color: #00bcd4;
+  margin-top: 10px; /* Default margin for labels */
+}
+
+/* Individual Skill Label Adjustments */
+.label-programming {
+  margin-top: 15px; /* Adjust label position */
+  margin-left: 30px; /* Horizontal alignment */
+}
+
+.label-webdev {
+  margin-top: 10px; /* Closer to the circle */
+}
+
+.label-devops {
+  margin-top: 20px; /* Adjust vertical position */
+  margin-left: 12px; /* Horizontal alignment */
+}
+
+.label-cloud {
+  margin-top: 12px; /* Adjust vertical position */
+}
+
+.label-appdev {
+  margin-top: 18px; /* App Development label adjustment */
+}
+
+.label-aiml {
+  margin-top: 20px; /*  label adjustment */
+  margin-left: 60px; /* Horizontal alignment */
 }
