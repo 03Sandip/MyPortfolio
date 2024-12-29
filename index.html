@@ -10,7 +10,10 @@
 <!-- Swiper JS -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
-
+<!-- AOS Library -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ 
   <title>MyPortfolio</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
@@ -36,6 +39,14 @@
 </head>
 
 <body>
+
+  <script>
+    AOS.init({
+      duration: 1000, // Animation duration in milliseconds
+      once: false     // Whether animation should happen only once
+    });
+  </script>
+  
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i&display=swap" rel="stylesheet">
 
   <!-- ======= Mobile nav toggle button ======= -->
@@ -116,10 +127,6 @@
     </div>
   </div>
 </section>
-
-
-
-
 <!-- Hire Me Modal -->
 <div class="modal fade" id="hireMeModal" tabindex="-1" aria-labelledby="hireMeModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -139,101 +146,120 @@
   </div>
 </div>
     <!-- About End  -->
-    
     <section id="education" class="resume">
       <div class="container">
-        <div class="section-title">
-          <h2>Education</h2>
-        </div>
-            <div class="resume-item">
-              <h4>M.TECH in Computer Science & Engineering </h4>
+        <div class="row">
+          <!-- Education Section -->
+          <div class="col-lg-6">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Education</h2>
+            </div>
+            <div class="resume-item" data-aos="fade-right" data-aos-delay="200">
+              <h4>M.TECH in Computer Science & Engineering</h4>
               <h5>2026 - 2028</h5>
               <p><em>Indian Institute of Technology</em></p>
             </div>
-            <div class="resume-item">
-              <h4>B.TECH in Computer Science & Engineering </h4>
+            <div class="resume-item" data-aos="fade-right" data-aos-delay="400">
+              <h4>B.TECH in Computer Science & Engineering</h4>
               <h5>2022 - 2026</h5>
               <p><em>DR.BC.ROY Engineering College, Durgapur</em></p>
-            </div> 
-            <div class="resume-item">
-              <h4>High Secondary &amp; Madhyamik </h4>
+            </div>
+            <div class="resume-item" data-aos="fade-right" data-aos-delay="600">
+              <h4>High Secondary &amp; Madhyamik</h4>
               <h5>2019 - 2022</h5>
-              <p><em>Gopalpur High School , Durgapur</em></p>
-              <h4> Primary Schoolling </h4>
-              <h5>2015 - 2018</h5>
-              <p><em>Gopalpur High School , Durgapur</em></p>
+              <p><em>Gopalpur High School, Durgapur</em></p>
             </div>
-        </div>
-      </div>
-    </section>
-
-
-
-    <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
-      <div class="container">
+          </div>
+          <!--Education End --> 
     
-        <div class="section-title">
-          <h2>Skills</h2>
-        </div>
-        
-        <div class="container">
-          <div class="row skills-content">
-            <div class="col-lg-6" data-aos="fade-up">
-    
-              <div class="progress" title="">
-                <span class="skill glow" data-detail="Programming skills include Java, Python, and C++">Programming <i class="val">84%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-    
-              <div class="progress" title="">
-                <span class="skill glow" data-detail="Experience in HTML, CSS, JavaScript, and frameworks like React">Web Development <i class="val">80%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-    
-              <div class="progress" title="">
-                <span class="skill glow" data-detail="Basic knowledge of Kotlin, Java, and Android Studio">Android Development <i class="val">40%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-    
+          <!-- Experience Section 
+          <div class="col-lg-6">
+            <div class="section-title" data-aos="fade-left">
+              <h2>Experience</h2>
             </div>
-    
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-    
-              <div class="progress" title="">
-                <span class="skill glow" data-detail="Expertise in AWS, Grafana,Linux ,Ansible, Amazon ELB, amazon S3, EC2 , Prometheus, Git, Docker, Kubernetes, and Jenkins">DevOps Engineer <i class="val">94%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-    
-              <div class="progress" title="">
-                <span class="skill glow" data-detail="Understanding of AWS, Azure, and GCP services">Cloud Computing <i class="val">57%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
-    
-              <div class="progress" title="">
-                <span class="skill glow" data-detail="Proficient in using Photoshop and Lightroom">Photo Editing <i class="val">55%</i></span>
-                <div class="progress-bar-wrap">
-                  <div class="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-                </div>
-              </div>
+            <div class="resume-item" data-aos="fade-left" data-aos-delay="200">
+              <h4>Software Engineer Intern</h4>
+              <h5>2024 - 2025</h5>
+              <p><em>ABC Tech Solutions</em></p>
+              <p>Worked on developing scalable backend systems using Python and Django, and optimized database performance.</p>
+            </div>
+            <div class="resume-item" data-aos="fade-left" data-aos-delay="400">
+              <h4>Freelance Web Developer</h4>
+              <h5>2023 - 2024</h5>
+              <p><em>Self-Employed</em></p>
+              <p>Created responsive websites for small businesses and implemented SEO strategies to increase online visibility.</p>
             </div>
           </div>
         </div>
-     </section> 
-<!-- ======= Skills Section  End ======= -->
+      </div>
+    
+    
+     Experience Section End -->
+    
+    </section>
 
-       
-
+<!-- Skills Section -->
+    <section id="skills" class="skills section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Skills</h2>
+        </div>
+    
+        <div class="row skills-content">
+          <!-- First Row -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
+            <div class="circular-progress" data-percent="84">
+              <div class="circle">
+                <span class="percentage">84%</span>
+              </div>
+              <span class="skill-label label-programming">Programming</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="circular-progress" data-percent="80">
+              <div class="circle">
+                <span class="percentage">80%</span>
+              </div>
+              <span class="skill-label label-webdev">Web Development</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="circular-progress" data-percent="94">
+              <div class="circle">
+                <span class="percentage">94%</span>
+              </div>
+              <span class="skill-label label-devops">DevOps Engineer</span>
+            </div>
+          </div>
+    
+          <!-- Second Row -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="circular-progress" data-percent="57">
+              <div class="circle">
+                <span class="percentage">57%</span>
+              </div>
+              <span class="skill-label label-cloud">Cloud Computing</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="circular-progress" data-percent="40">
+              <div class="circle">
+                <span class="percentage">40%</span>
+              </div>
+              <span class="skill-label label-appdev">App Development</span>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="circular-progress" data-percent="30">
+              <div class="circle">
+                <span class="percentage">30%</span>
+              </div>
+              <span class="skill-label label-aiml">AI/ML</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 <!-- End Skills Section -->
 
     
