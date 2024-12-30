@@ -1,10 +1,4 @@
-/**
-* Template Name: iPortfolio
-* Updated: Sep 18 2023 with Bootstrap v5.3.2
-* Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -260,20 +254,48 @@ if (typed) {
 
 /**
    * Skill slider 
-   */
-document.addEventListener("DOMContentLoaded", () => {
-  const progressBars = document.querySelectorAll(".circular-progress");
+*/
 
-  progressBars.forEach((progressBar) => {
-    const percent = progressBar.getAttribute("data-percent");
-    progressBar.querySelector(".circle").style.setProperty("--percent", percent);
+document.addEventListener("DOMContentLoaded", () => {
+  const skillElements = document.querySelectorAll(".circular-progress");
+
+  const startProgress = (skill) => {
+    const percent = parseInt(skill.getAttribute("data-percent"));
+    const percentageElement = skill.querySelector(".percentage");
+    let currentPercent = 0;
+
+    const updateProgress = () => {
+      currentPercent++;
+      percentageElement.textContent = `${currentPercent}%`;
+
+      if (currentPercent <= percent) {
+        const circle = skill.querySelector(".circle");
+        circle.style.background = `conic-gradient(
+          #00bcd4 ${currentPercent * 3.6}deg,
+          #ddd ${currentPercent * 3.6}deg
+        )`;
+        requestAnimationFrame(updateProgress);
+      }
+    };
+
+    updateProgress();
+  };
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          startProgress(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 } // Adjust the threshold as needed
+  );
+
+  skillElements.forEach((skill) => {
+    observer.observe(skill);
   });
 });
-
-
-  
-  
-
   /**
    * Initiate Pure Counter 
    */
