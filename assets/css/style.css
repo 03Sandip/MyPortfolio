@@ -1060,8 +1060,9 @@ section {
 
 
 
-/* Circular Progress Bar Styles */
-/* Circular Progress Container */
+/*--------------------------------------------------------------
+# Circular Progressbar
+--------------------------------------------------------------*/
 .circular-progress {
   position: relative;
   width: 150px;
@@ -1109,8 +1110,9 @@ section {
   color: #00bcd4;
   margin-top: 10px; /* Default margin for labels */
 }
-
-/* Individual Skill Label Adjustments */
+/*--------------------------------------------------------------
+# Skill Detailes
+--------------------------------------------------------------*/
 .label-programming {
   margin-top: 15px; /* Adjust label position */
   margin-left: 30px; /* Horizontal alignment */
@@ -1137,4 +1139,51 @@ section {
   margin-top: 20px; /*  label adjustment */
   margin-left: 60px; /* Horizontal alignment */
 }
- 
+
+
+/* Individual Skill Detailes  */
+.skill-card {
+  perspective: 1000px;
+}
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateY(0);
+  transition: transform 0.6s;
+}
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
+}
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+}
+.skill-card-back {
+  transform: rotateY(180deg);
+  background-color: #f4f4f4;
+}
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* Remove gaps between items */
+}
+.col-lg-4, .col-md-6 {
+  padding: 0; /* Remove padding inside columns */
+  margin: 0; /* Remove any default margin */
+  flex: 1 1 33%; /* Ensure proper spacing for a 3-column layout */
+  box-sizing: border-box; /* Prevent padding from affecting size */
+}
