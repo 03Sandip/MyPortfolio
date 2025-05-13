@@ -142,6 +142,11 @@ h6 {
     padding-right: 12px;
   }
 }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> d3c761d89491c8017d185d6a3114e6ccbe378a1b
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -404,6 +409,7 @@ section {
   transform: scale(1.1);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
+<<<<<<< HEAD
 /*--------------------------------------------------------------
 # -----Ce-----
 --------------------------------------------------------------*/
@@ -592,6 +598,13 @@ section {
   flex: 1 1 33%; /* Ensure proper spacing for a 3-column layout */
   box-sizing: border-box; /* Prevent padding from affecting size */
 }
+=======
+
+
+/*--------------------------------------------------------------
+# Skills
+--------------------------------------------------------------*/
+>>>>>>> d3c761d89491c8017d185d6a3114e6ccbe378a1b
 
 
 
@@ -657,6 +670,189 @@ section {
 }
 
 
+<<<<<<< HEAD
+=======
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonials .testimonials-carousel,
+.testimonials .testimonials-slider {
+  overflow: hidden;
+}
+
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  text-align: center;
+  min-height: 320px;
+}
+
+.testimonials .testimonial-item .testimonial-img {
+  width: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.testimonials .testimonial-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px 0;
+  color: #111;
+}
+
+.testimonials .testimonial-item h4 {
+  font-size: 14px;
+  color: #999;
+  margin: 0;
+}
+
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
+  color: #c3e8fa;
+  font-size: 26px;
+}
+
+.testimonials .testimonial-item .quote-icon-left {
+  display: inline-block;
+  left: -5px;
+  position: relative;
+}
+
+.testimonials .testimonial-item .quote-icon-right {
+  display: inline-block;
+  right: -5px;
+  position: relative;
+  top: 10px;
+}
+
+.testimonials .testimonial-item p {
+  font-style: italic;
+  margin: 0 15px 15px 15px;
+  padding: 20px;
+  background: #fff;
+  position: relative;
+  margin-bottom: 35px;
+  border-radius: 6px;
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.testimonials .testimonial-item p::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-top: 20px solid #fff;
+  border-right: 20px solid transparent;
+  border-left: 20px solid transparent;
+  position: absolute;
+  bottom: -20px;
+  left: calc(50% - 20px);
+}
+
+.testimonials .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #149ddd;
+}
+
+.testimonials .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #149ddd;
+}
+
+
+
+/*--------------------------------------------------------------
+# Skill slider
+--------------------------------------------------------------*/
+#skills-slider {
+  width: 120%;
+  max-width: 800px; /* Decreased width of the slider for a smaller box size */
+  margin: 0 auto;
+  overflow: hidden; /* Prevents images from overflowing */
+  float: right; /* Aligns the slider to the right side */
+}
+
+.swiper-wrapper {
+  display: flex;
+  transition: transform 0.5s ease; /* Smooth transition between slides */
+}
+
+.swiper-slide {
+  width: 120%; /* Make each slide take up the full width of the container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* Keeps the aspect ratio */
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.1);
+}
+
+.detail-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.3));
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+}
+
+
+.detail-overlay h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  animation: slideUp 0.6s ease;
+}
+
+.detail-overlay p {
+  font-size: 1rem;
+  padding: 0 15px;
+  animation: slideUp 0.6s ease 0.1s;
+}
+
+.image-container:hover .detail-overlay {
+  opacity: 1;
+}
+
+>>>>>>> d3c761d89491c8017d185d6a3114e6ccbe378a1b
 
 /*--------------------------------------------------------------
 # Contact
@@ -889,9 +1085,15 @@ section {
   }
 }
 
+<<<<<<< HEAD
 /* --------------------------------------------------------------
 # Footer
 --------------------------------------------------------------
+=======
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+>>>>>>> d3c761d89491c8017d185d6a3114e6ccbe378a1b
 #footer {
   padding: 15px;
   color: #f4f6fd;
@@ -921,7 +1123,11 @@ section {
     width: auto;
     padding-right: 20px 15px;
   }
+<<<<<<< HEAD
 }*/
+=======
+}
+>>>>>>> d3c761d89491c8017d185d6a3114e6ccbe378a1b
 
 /*-------------------------------------
         Profiles
@@ -1061,8 +1267,138 @@ section {
 
 
 
+<<<<<<< HEAD
 
 
 
 
 
+=======
+/*--------------------------------------------------------------
+# Circular Progressbar
+--------------------------------------------------------------*/
+.circular-progress {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+}
+
+.circle {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #00bcd4 calc(var(--percent) * 1%), /* Blue progress */
+    #e0e0e0 0 /* Gray remaining */
+  );
+}
+
+.circle::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: #fff; /* Inner white background */
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.percentage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #00bcd4;
+  z-index: 3;
+}
+
+.skill-label {
+  text-align: center;
+  font-size: 1em;
+  color: #00bcd4;
+  margin-top: 10px; /* Default margin for labels */
+}
+/*--------------------------------------------------------------
+# Skill Detailes
+--------------------------------------------------------------*/
+.label-programming {
+  margin-top: 15px; /* Adjust label position */
+  margin-left: 30px; /* Horizontal alignment */
+}
+
+.label-webdev {
+  margin-top: 10px; /* Closer to the circle */
+}
+
+.label-devops {
+  margin-top: 20px; /* Adjust vertical position */
+  margin-left: 12px; /* Horizontal alignment */
+}
+
+.label-cloud {
+  margin-top: 12px; /* Adjust vertical position */
+}
+
+.label-appdev {
+  margin-top: 18px; /* App Development label adjustment */
+}
+
+.label-aiml {
+  margin-top: 20px; /*  label adjustment */
+  margin-left: 60px; /* Horizontal alignment */
+}
+
+
+/* Individual Skill Detailes  */
+.skill-card {
+  perspective: 1000px;
+}
+.skill-card-inner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  transform-style: preserve-3d;
+  transform: rotateY(0);
+  transition: transform 0.6s;
+}
+.skill-card:hover .skill-card-inner {
+  transform: rotateY(180deg);
+}
+.skill-card-front,
+.skill-card-back {
+  position: absolute;
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  padding: 10px;
+}
+.skill-card-back {
+  transform: rotateY(180deg);
+  background-color: #f4f4f4;
+}
+.skills-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0; /* Remove gaps between items */
+}
+.col-lg-4, .col-md-6 {
+  padding: 0; /* Remove padding inside columns */
+  margin: 0; /* Remove any default margin */
+  flex: 1 1 33%; /* Ensure proper spacing for a 3-column layout */
+  box-sizing: border-box; /* Prevent padding from affecting size */
+}
+>>>>>>> d3c761d89491c8017d185d6a3114e6ccbe378a1b
